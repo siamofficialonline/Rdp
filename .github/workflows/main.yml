@@ -1,0 +1,17 @@
+name: Setup Windows RDP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-rdp:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run setup script
+        run: |
